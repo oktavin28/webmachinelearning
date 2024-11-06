@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Tensorflow.js: Sentiment Analysis Demo </title>
+    
+    <link href="styles/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>      
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>  
+    <link href='https://fonts.googleapis.com/css?family=Pontano Sans' rel='stylesheet'> 
+    
+    <!-- Memanggil versi terbaru TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+    <!--  -->
+  </head>
+  <body onload="myFunction()" style="margin:0;">
+    <div class = "header">
+      <img src="styles/logo.png"></img>
+    </div>
+    
+    <!-- Add a <div> tag with the "main" class -->
+    <div class = "main">
+    <div class="container">
+      <img src="styles/tensorflow_logo.png"></img>
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+      <link href='https://fonts.googleapis.com/css?family=Archivo Narrow' rel='stylesheet'>
+      
+      <h1>Tensorflow.js</h1>
+      <h2>Sentiment Analysis</h2>
+      
+      <h3>
+      <p>
+        Contoh ini menunjukkan pemuatan model yang telah dilatih sebelumnya dan menggunakannya di browser. 
+        Model ini dilatih untuk memprediksi sentimen ulasan restoran singkat (sebagai skor antara 0 dan 1). 
+        Pelatihan dilakukan di sisi server menggunakan Python dan kemudian diubah menjadi model TensorFlow.js.
+
+      </p>
+      <p>
+        Model ini dilatih menggunakan ulasan YELP yang telah dipotong hingga maksimal 20 kata, 
+        hanya 2000 kata yang paling sering digunakan dalam ulasan yang digunakan. 
+        Kalian dapat bereksperimen dengan model ini di halaman ini.
+      </p>
+      </h3>
+      
+    </div>
+    </div>
+    
+    <div class="container">
+    <div class = "demo">
+      <h1>Terima Kasih Atas Kunjungan Anda!</h1>
+      <h2>Kami berkomitmen untuk memberikan pengalaman yang luar biasa kepada pelanggan kami, dan masukan Anda membantu kami mewujudkannya.</h2>
+      <br><br>
+      <div id="loaderlabel"<h2>Loading Model...</h2></div>
+      <div id="loader"> </div>   
+      <div style="display:none;" id="mainAPP">
+      <label for="input">Bagaimana makanan yang disajikan kepada Anda? </label><br><br>
+      <input placeholder="Try: 'The salad is fresh and delicious" id="input">
+      <button class="button" style="vertical-align:middle"><span>Post Review </span></button>
+      <p></p>
+    </div>     
+    </div>  
+          
+    </div>
+      <!-- Memanggil script.js -->
+      <script src="script.js"></script>
+      <!--  -->
+  </body>
+</html>
